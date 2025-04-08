@@ -1,0 +1,188 @@
+.game-container {
+    margin-top: 50px;
+    height: 100vh;
+}
+
+.board-container {
+    display: flex;
+    background-color: #FF8C94;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    margin: auto;
+}
+
+.instructions {
+    color: #111111;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.board {
+    display: grid;
+    gap: 5px;
+    background-color: #FF8C94;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+    background-color: #FF8C94;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    background-color: #FFD3B6;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #776e65;
+}
+
+.points {
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #341616;
+}
+
+.cell-2 {
+    background-color: #8b149e;
+    color: #f9f6f2;
+}
+
+.cell-4 {
+    background-color: #dae025;
+    color: #f9f6f2;
+}
+
+.cell-8 {
+    background-color: #F2B179;
+    color: #f9f6f2;
+}
+
+.cell-16 {
+    background-color: #78eb72;
+    color: #f9f6f2;
+}
+
+.cell-32 {
+    background-color: #68599f;
+    color: #f9f6f2;
+}
+
+.cell-64 {
+    background-color: #9b1e69;
+    color: #f9f6f2;
+}
+
+.cell-128 {
+    background-color: #a26617;
+    color: #f9f6f2;
+}
+
+.cell-256 {
+    background-color: #055635;
+    color: #f9f6f2;
+}
+
+.cell-512 {
+    background-color: #EDC850;
+    color: #f9f6f2;
+}
+
+.cell-1024 {
+    background-color: #EDC53F;
+    color: #f9f6f2;
+}
+
+.cell-2048 {
+    background-color: #EDC22E;
+    color: #f9f6f2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+}
+
+.modal {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    min-width: 280px;
+}
+
+.message {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: #ff6f61;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #ff6f61;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #ff3b2e;
+}
+
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.optionsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.boardSizeLabel {
+    color: #111111;
+}
+
+.boardSizeDropdown {
+    margin-left: 10px;
+    margin-right: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #111111;
+    background-color: #b5e4ae;
+    color: #111111;
+}
+
+.boardSizeOption {
+    background-color: #b5e4ae;
+    color: #111111;
+}

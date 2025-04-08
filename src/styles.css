@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    background-color: #A8E6CF;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: white;
+    text-align: center;
+}

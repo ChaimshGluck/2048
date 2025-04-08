@@ -1,0 +1,42 @@
+<div class="points">Your score: {{playerScore}}</div>
+<div class="points">Highest Score: {{highestScore}}</div>
+<div class="instructions">Press the arrow keys to play!</div>
+
+<div class="optionsContainer">
+    <label class="boardSizeLabel" for="boardSize">Board Size:</label>
+    <select class="boardSizeDropdown" id="boardSize" (change)="changeBoardSize($event)">
+        @for (size of boardSizes; track size) {
+        <option class="boardSizeOption" [value]="size">{{size}} x {{size}}</option>
+        }
+    </select>
+
+    <button class="restart-button" (click)="restartGame()">Restart game</button>
+</div>
+
+<div class="game-container">
+    <div class="board-container">
+        <div class="board">
+            @for (row of board; track $index) {
+            <div class="row">
+                @for (cell of row; track cell.index) {
+                <div class="cell" [ngClass]="getCellClass(cell.number)">
+                    {{cell.number}}
+                </div>
+                }
+            </div>
+            }
+        </div>
+    </div>
+</div>
+
+@if (gameOver || showWinMsg) {
+<div class="overlay">
+    <div class="modal">
+        <h2 class="message">{{gameOver ? "Game Over!" : "You won!"}}</h2>
+        <div class="buttons">
+            <button (click)="restartGame()">{{gameOver ? "Restart game" : "Play Again"}}</button>
+            @if (showWinMsg) {<button (click)="continueGame()">Continue playing</button>}
+        </div>
+    </div>
+</div>
+}
